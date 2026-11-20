@@ -4,8 +4,15 @@ AI FDE course, week 1: **ship the intake.** One customer email in, one
 schema-valid object out: `category`, `missing_fields`, `next_action`,
 `customer_message`, `confidence`. All emails are synthetic.
 
+> **Note on the model:** I didn't have Anthropic API credits this week, so the
+> committed run in `runs/week-1/` uses Google Gemini (`gemini-3.8-flash`, free
+> tier) through its OpenAI-compatible API. The intake supports both providers.
+> Switching to Claude is a `.env` change only (`LLM_PROVIDER=anthropic`,
+> `ANTHROPIC_API_KEY`, `LLM_MODEL=claude-haiku-5-5`), with the same prompt,
+> schema, validation loop and logging. I'll rerun on Claude once I have credits.
+
 ```
-email ─> prompts/intake_v1.md + record_intake tool ─> Claude ─> validate in code (Pydantic)
+email ─> prompts/intake_v1.md + record_intake tool ─> model ─> validate in code (Pydantic)
               ▲                                                          │
               └──── invalid: error text sent back (max 3 calls) ◄────────┘
                                                                          │ valid
