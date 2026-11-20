@@ -1,0 +1,9 @@
+{
+  "category": "coverage",
+  "missing_fields": [
+    "policy_number"
+  ],
+  "next_action": "ask",
+  "customer_message": "Hi Priya,\n\nThank you for reaching out. We would be happy to check your physiotherapy coverage and session limits for you. Could you please provide your policy number once you have your card handy? \n\nOnce we have that, an agent will look into your plan details and follow up with you.\n\nBest regards,\nHarbourline Support",
+  "confidence": 0.95
+}

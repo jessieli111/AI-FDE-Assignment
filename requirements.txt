@@ -1,0 +1,4 @@
+anthropic>=0.80
+openai>=1.40
+pydantic>=2.7
+pytest>=8.0
